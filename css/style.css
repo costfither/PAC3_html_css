@@ -20,7 +20,7 @@ h2,h3,header,footer,nav{
     font-family: 'Open Sans', sans-serif;
 }
 h3{
-    font-weight: bold 700;
+    font-weight: 700;
 }
 /* HEADER */
 header.index{
@@ -32,18 +32,18 @@ header.index > a{
 }
 header > a > figure {
     display: flex;
-    orientation: row;
+    flex-direction: row;
     align-items: center;
 }
 header cite{
-    font-style: italic 400;
+    font-weight: 400;
     color: #9b1700;
 }
 header > a > figure > p{
     margin-left: 10px;
     color:  #1c1c1c;
     font-size: 2em;
-    font-weight: bold 700;
+    font-weight: 700;
 }
 header > a > figure > img{
     width: 100%;
@@ -58,11 +58,11 @@ header.index div.nav{
     text-align: center;
     align-items: center;
     font-family: 'Open Sans',serif;
-    font-weight: bold 700;
+    font-weight: 700;
 }
 nav{
     color: black;
-    font-weight: 700 bold;
+    font-weight: 700;
 }
 nav ul{
     list-style: none;
@@ -85,7 +85,7 @@ nav a:hover{
 }
 nav a:active{
     font-style: italic;
-    font-weight: 700 bold;
+    font-weight: 700;
 }
 header.index > div.botoInici{
     grid-column: 3;
@@ -111,7 +111,7 @@ div.nav nav ul li a cite{
         align-items: center;
         margin-bottom: 50px;
     }
-    header.index:nth-child(){
+    header.index:nth-child{
         margin-right: auto;
         margin-left: auto;
     }
@@ -168,7 +168,7 @@ footer{
     text-align: left;
     font-size: 12px;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-row: auto;
 }
 footer ul.left{
@@ -442,7 +442,7 @@ div.sessions > ul{
 }
 div.sessions li a{
     color: black;
-    font-weight: 700 bold;
+    font-weight: 700;
 }
 main.sessions nav ul{
     margin: 0px;
@@ -461,6 +461,34 @@ div.clubs{
 div.club{
     float: left;
 }
+section.club{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+section.club h3{
+    grid-column: 1/4;
+    text-align: left;
+}
+section.club a{
+    margin: 0px;
+    padding: 0px;
+    background:  #FFFFFF;
+    box-shadow: 0px 0px 4px 4px rgb(28,28, 28,0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+section.club figure{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+section.club img{
+    width: 100%;
+}
+
 div.club > section{
     margin-left: 10px;
     display: grid;
@@ -608,9 +636,7 @@ article.detall div img.circumferencia{
     float: left;
     margin-right:2rem; 
     border-radius: 50%;
-    -webkit-shape-outside:circle();
     shape-outside:circle();
-
 }
 .video iframe{
     border: none;
